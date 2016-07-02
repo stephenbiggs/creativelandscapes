@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>creative landscapes</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	
+
+		
+
+			<div class="centered header">
+
+				<div class="grid_12">
+
+					<div class="grid_4 alpha">
+
+						<h1 class="brand"><%= link_to "creative landscapes", root_path %></h1>
+
+					</div>
+
+					<div class="grid_8 omega">
+
+						<div class="navigation">
+							<ul>
+								<li><%= link_to "context", context_path %></li>
+								<li><%= link_to "projects", projects_path %></li>
+								<li><%= link_to "publication", publication_path %></li>
+								<li><%= link_to "contact", contact_path %></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+	
+
+
+				
+
+					
+
+						<div class="grid_12 content <%= "bg" if @page == "home" %> <%= "bg1" if @page != "home" %>">
+
+							<div class="centered">
+
+			
+																								<%= yield %>
+					
+							</div>
+
+						</div>
+
+					
+
+			
+			
+
+				<div class="centered">
+
+					<div class="grid_12 sponsors">
+
+						<h3>supported by</h3>
+								<ul>
+									<li class="logo grid_2 alpha"><%= image_tag('1_STAFFS.png') %></li>
+									<li class="logo grid_2"><%= image_tag('2_CROPPERS.png') %></li>
+									<li class="logo grid_2"><%= image_tag('3_GDEN.png') %></li>
+									<li class="logo grid_2"><%= image_tag('4_PAPER.png') %></li>
+									<li class="logo grid_2"><%= image_tag('5_UAL.png') %></li>
+									<li class="logo grid_2 omega"><%= image_tag('6_BREWERY.png') %></li>
+								</ul>
+					</div>
+
+				</div>
+
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>
